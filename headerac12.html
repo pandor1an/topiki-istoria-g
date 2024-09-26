@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Main Page</title>
+<META content="text/html; charset=iso-8859-7" http-equiv=Content-Type>
+
+</head>
+<body bottommargin="0" leftmargin="0" rightmargin="0" topMargin="0" bgcolor="#B2AAA8" scroll='yes'>
+
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+//-->
+</script>
+
+<script language="javascript">
+	nereidFadeObjects = new Object();
+	nereidFadeTimers = new Object();
+	var flag =0;
+
+function nereidFade(object, destOp, rate, delta){
+if (!document.all)
+return
+    if (object != "[object]"){  
+        setTimeout("nereidFade("+object+","+destOp+","+rate+","+delta+")",0);
+        return;
+    }
+        
+    clearTimeout(nereidFadeTimers[object.sourceIndex]);
+    
+    diff = destOp-object.filters.alpha.opacity;
+    direction = 1;
+    if (object.filters.alpha.opacity > destOp){
+        direction = -1;
+    }
+    delta=Math.min(direction*diff,delta);
+    object.filters.alpha.opacity+=direction*delta;
+
+    if (object.filters.alpha.opacity != destOp){
+        nereidFadeObjects[object.sourceIndex]=object;
+        nereidFadeTimers[object.sourceIndex]=setTimeout("nereidFade(nereidFadeObjects["+object.sourceIndex+"],"+destOp+","+rate+","+delta+")",rate);
+    }
+}
+
+	function normal(obj){
+	flag =obj;
+	for (i=1;i<11;i++){
+	ttt = 'img'+i;
+	if (flag != i){
+	nereidFade(ttt,60,25,6);
+	}
+	}
+	}
+	</script>
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr valign="top"> 
+    <td  background="images/topbg.jpg" height="6" width="961"><img src="images/spacer1.gif" width="41" height="61"></td>
+  </tr>
+  <tr> 
+    <td  align="center" cellpadding="0" cellspacing="0" height="70"> 
+      <table align="center" height="70" cellpadding="0" cellspacing="0"  bgcolor="#B2AAA8" border="0">
+       <tr>
+	<td align="center" valign="middle" width="114" ><a href="slider95fc.html?sub=1" target="home" ><img onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            src="images/01.jpg" width="114" height="70" border="0" alt="Η Καισαριανή Σήμερα" onClick=normal(1) onmouseout="javascript:if (flag != 1) {nereidFade(this,60,25,6)}" name="img1"></a></td>
+<td align="center" valign="top" width="102"><a href="slider77c4.html?sub=2" target="home" ><img src="images/02.jpg" width="102" height="70" border="0" alt="Γενέθλια Γη" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 2) {nereidFade(this,60,25,6)}" onClick="javascript:normal(2);" name="img2" ></a></td>
+<td align="center" valign="middle" width="102"><a href="slider3397.html?sub=3" target="home" ><img src="images/03.jpg" width="102" height="70" border="0" alt="Πόλεμος και Καταστροφή" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 3) {nereidFade(this,60,25,6)}" onClick="javascript:normal(3)" name="img3" ></a></td>
+<td align="center" valign="middle"  width="107"><a href="slider8c99.html?sub=4" target="home" ><img src="images/04.jpg" width="107" height="70" border="0" alt="Εγκατάσταση Προσφύγων" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 4) {nereidFade(this,60,25,6)}"  onClick="javascript:normal(4)" name="img4"></a></td>
+<td align="center" valign="middle" width="88"> <a href="slider0109.html?sub=5" target="home" ><img src="images/05.jpg" width="88" height="70" border="0" alt="Οικονομία" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 5) {nereidFade(this,60,25,6)}"  onClick="javascript:normal(5)" name="img5" ></a></td>
+<td align="center" valign="middle" width="71"><a href="sliderfc0f.html?sub=6" target="home" ><img src="images/06.jpg" width="71" height="70" border="0" alt="Παιδεία" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 6) {nereidFade(this,60,25,6)}"  onClick="javascript:normal(6);" name="img6" ></a></td>
+<td align="center" valign="middle" width="143"><a href="slider0b76.html?sub=7" target="home"><img src="images/07.jpg" width="143" height="70" border="0" alt="Θρησκευτικότητα των Προσφύγων" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 7) {nereidFade(this,60,25,6)}" onClick="javascript:normal(7);" name="img7" ></a></td>
+<td align="center" valign="middle" width="94"><a href="slider805c.html?sub=8" target="home"><img src="images/08.jpg" width="94" height="70" border="0" alt="Πολιτισμός" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 8) {nereidFade(this,60,25,6)}" onClick="javascript:normal(8);" name="img8" ></a></td>
+<td align="center" valign="middle" width="79"><a href="slider4edb.html?sub=9" target="home"><img src="images/09.jpg" width="79" height="70" border="0" alt="Κοινωνία" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 9) {nereidFade(this,60,25,6)}" onClick="javascript:normal(9);" name="img9" ></a></td>
+<td align="center" valign="middle" width="100"><a href="slider0999.html?sub=10" target="home"><img src="images/10.jpg" width="100" height="70" border="0" alt="Εμείς και οι Πρόσφυγες" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 10) {nereidFade(this,60,25,6)}" onClick="javascript:normal(10);" name="img10" ></a></td>
+</tr>
+    </table>
+	</td>
+  </tr>
+  </table>
+</body>
+</html>

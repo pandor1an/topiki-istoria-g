@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Main Page</title>
+<META content="text/html; charset=windows-1253" http-equiv=Content-Type>
+	
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+//-->
+</script>
+
+<script language="javascript">
+	nereidFadeObjects = new Object();
+	nereidFadeTimers = new Object();
+	var flag =0;
+
+function nereidFade(object, destOp, rate, delta){
+if (!document.all)
+return
+    if (object != "[object]"){  
+        setTimeout("nereidFade("+object+","+destOp+","+rate+","+delta+")",0);
+        return;
+    }
+        
+    clearTimeout(nereidFadeTimers[object.sourceIndex]);
+    
+    diff = destOp-object.filters.alpha.opacity;
+    direction = 1;
+    if (object.filters.alpha.opacity > destOp){
+        direction = -1;
+    }
+    delta=Math.min(direction*diff,delta);
+    object.filters.alpha.opacity+=direction*delta;
+
+    if (object.filters.alpha.opacity != destOp){
+        nereidFadeObjects[object.sourceIndex]=object;
+        nereidFadeTimers[object.sourceIndex]=setTimeout("nereidFade(nereidFadeObjects["+object.sourceIndex+"],"+destOp+","+rate+","+delta+")",rate);
+    }
+}
+
+	function normal(obj){
+	flag =obj;
+	for (i=1;i<5;i++){
+	ttt = 'img'+i;
+	if (flag != i){
+	nereidFade(ttt,60,25,6);
+	}
+	}
+	
+	}
+	
+		
+	</script>
+
+</head>
+<body bottommargin="0" leftmargin="0" rightmargin="0" topMargin="0" scroll='auto'  onLoad="nereidFade(img1,100,30,6);normal(1);" bgcolor="#D4893B">
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr valign="top"> 
+    <td  background="images/topbg.jpg" height="60" width="100%" align="right" >
+	<table width=100% height=100% border=0 cellpadding="0" cellspacing="0"><tr><td valign=top><img src="images/top1.jpg" width="198" height="59" border="0" alt=""></td></tr></table>
+</td>
+  </tr>
+  <tr> 
+    <td  align="center"  cellpadding="0" cellspacing="0"  valign=top> 
+     <table cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr>
+<td align="center" valign="middle" ><a href="info681a.html?id=1" target="home" ><img src="images/01.jpg" width="200" height="73" border="0" alt="Η Καβάλα του 19ου αιώνα" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 1) {nereidFade(this,60,25,6)}"  onClick="javascript:normal(1)" name="img1"></a></td>
+<td align="center" valign="middle" >
+			
+			<a href="info8803.html?id=7" target="home" ><img src="images/02.jpg" width="200" height="73" border="0" alt="Η Καβάλα του 20ου αιώνα" onmouseover=nereidFade(this,100,30,6) 
+           style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 2) {nereidFade(this,60,25,6)}" onClick="javascript:normal(2);" name="img2" ></a></td>
+<td align="center" valign="middle" > <a href="info0055.html?id=11" target="home" ><img onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            src="images/03.jpg" width="200" height="73" border="0" alt="Το εμπόριο του καπνού" onClick=normal(3) onmouseout="javascript:if (flag != 3) {nereidFade(this,60,25,6)}" name="img3"></a></td>
+<td align="center" valign="middle" > <a href="info7429.html?id=15" target="home"  > <img src="images/04.jpg" width="200" height="73" border="0" alt="Το εργατικό κίνημα" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 4) {nereidFade(this,60,25,6)}" onClick="javascript:normal(4)" name="img4" ></a> </td>
+<td align="center" valign="middle" >
+			<a href="epilogos.html" target="_top"  > <img src="images/05.jpg" width="200" height="73" border="0" alt="Η αστική κοινωνία σήμερα" onmouseover=nereidFade(this,100,30,6) 
+            style="FILTER: alpha(opacity=60)" 
+            onmouseout="javascript:if (flag != 5) {nereidFade(this,60,25,6)}" onClick="javascript:normal(5)" name="img5"></a>
+			</td>
+</tr>
+</table>
+	</td>
+  </tr>
+  </table>
+</body>
+</html>    

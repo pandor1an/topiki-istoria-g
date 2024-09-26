@@ -1,0 +1,40 @@
+h1,h2,{
+	font: bold 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.title {
+	font: bold 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+p, a, ul, li{
+	font: 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent: 20px;
+}
+
+
+ BODY {
+	scrollbar-arrow-color: #660033;
+	scrollbar-track-color: #F6E0B7;
+	scrollbar-shadow-color: #660033;
+	scrollbar-face-color: #F6E0B7;
+	scrollbar-highlight-color: #F6E0B7;
+	scrollbar-darkshadow-color: #F6E0B7;
+	scrollbar-3dlight-color: #660033;
+	BORDER-RIGHT: medium none;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP: medium none;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	BORDER-LEFT: medium none;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: medium none;
+	BACKGROUND-COLOR: #E6DEDE;
+	background-image: url(../bg.jpg);
+}
+ 
+.a {
+	background: #EEE1C9;
+}
+
+//-->

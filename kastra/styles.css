@@ -1,0 +1,52 @@
+<!--
+ BODY {
+  scrollbar-arrow-color:#660033;
+  scrollbar-track-color:#F6E0B7;
+  scrollbar-shadow-color:#660033;
+  scrollbar-face-color:#F6E0B7;
+  scrollbar-highlight-color:#F6E0B7;
+  scrollbar-darkshadow-color:#F6E0B7;
+  scrollbar-3dlight-color:#660033;
+ BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: medium none;
+    BACKGROUND-COLOR: #E6DEDE
+ 
+ }
+ 
+.buttonA{
+	BACKGROUND-COLOR: #E4CFA9; 
+	BORDER-BOTTOM: 1px solid; 
+	BORDER-LEFT: 1px solid; 
+	BORDER-RIGHT: 1px solid; 
+	BORDER-TOP: 1px solid; 
+	FONT-SIZE: 10pt; 
+	font-weight:bold;
+	text-align:center;
+}
+
+table.exta {
+	border-width:1px;
+	border-style: solid;
+	border-color:#8C260F;
+}
+
+.exta td {
+	border-top: groove #E4CFA9;
+	border-right: groove #E4CFA9;
+	border-bottom: groove #E4CFA9;
+	border-left: groove #E4CFA9;
+	border-top-width: 5px;
+	border-right-width: 5px;
+	border-bottom-width: 5px;
+	border-left-width: 5px; 
+	font: bold;
+}
+
+//-->

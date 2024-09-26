@@ -1,0 +1,55 @@
+h1, h2{
+	font: bold 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+p, a, ul, li{
+	font: 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent: 20px;
+}
+ BODY {
+  scrollbar-arrow-color:#588EE8;
+  scrollbar-track-color:#94BAFB;
+  scrollbar-shadow-color:#94BAFB;
+  scrollbar-face-color:#C6DAFD;
+  scrollbar-highlight-color:#94BAFB;
+  scrollbar-darkshadow-color:#94BAFB;
+  scrollbar-3dlight-color:#588EE8;
+ BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: medium none;
+    BACKGROUND-COLOR: #94BAFB;
+	background-image: url(../images/bg.jpg); 
+ }
+ 
+.title {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: White;
+	filter:'glow(color="#2558B2", Strength=10)';
+	text-align: center;
+}
+a:link{
+	color: white;
+}
+
+a:visited{
+	color: white;
+}
+a:hover{
+	color: #183C7A;
+}
+a:active{
+	color: white;
+}
+.a {
+	border-width: 1;
+	border-style: solid;
+	border-color: white;
+	background-color: #94BAFB;
+}
